@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 const httpServer = createServer(app);
-httpServer.listen(4000, (err) => {
+httpServer.listen(process.env.PORT || 4000, (err) => {
     if(err) {
         return console.log(err);
     }
